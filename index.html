@@ -16,9 +16,7 @@
                     document.querySelector('.ltngOutContainer'),
                     (cmp) => {
                         console.log('Lighning component created.');
-                        $A.eventService.addHandler({
-                            event: 'updateGTMdataLayer',
-                            handler: function (event) {
+                        cmp.addEventHandler('updateGTMdataLayer', function (event) {
                                 debugger;
                                 window.dataLayer = window.dataLayer || [];
                                 window.dataLayer.push(
