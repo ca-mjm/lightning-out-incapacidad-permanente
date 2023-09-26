@@ -17,12 +17,11 @@
                     (cmp) => {
                         console.log('Lighning component created.');
                         cmp.addEventHandler('updateGTMdataLayer', function (event) {
-                                debugger;
-                                window.dataLayer = window.dataLayer || [];
-                                window.dataLayer.push(
-                                    event.detail
-                                );
-                            }
+                            debugger;
+                            window.dataLayer = window.dataLayer || [];
+                            window.dataLayer.push(
+                                event.detail
+                            );
                         });
                     }
                 );
