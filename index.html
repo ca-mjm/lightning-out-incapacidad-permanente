@@ -19,6 +19,7 @@
                         $A.eventService.addHandler({
                             event: 'updateGTMdataLayer',
                             handler: function (event) {
+                                debugger;
                                 window.dataLayer = window.dataLayer || [];
                                 window.dataLayer.push(
                                     event.detail
