@@ -16,6 +16,15 @@
                     document.querySelector('.ltngOutContainer'),
                     (cmp) => {
                         console.log('Lighning component created.');
+                        $A.eventService.addHandler({
+                            event: 'updateGTMdataLayer',
+                            handler: function (event) {
+                                window.dataLayer = window.dataLayer || [];
+                                window.dataLayer.push(
+                                    event.detail
+                                );
+                            }
+                        });
                     }
                 );
             },
